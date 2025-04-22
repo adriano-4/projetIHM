@@ -1,0 +1,82 @@
+:root {
+  --bleu-marine: #004b8d;
+  --jaune-or: #ffb400;
+  --gris-clair: rgba(0, 0, 0, 0.088);
+}
+.centreacceuil {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url(../assets/coop.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+.noir {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.56);
+}
+.centreacceuil_1 {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  width: 1200px;
+  height: 600px;
+  border-radius: 10px;
+  position: relative;
+  top: 50px;
+}
+#titre1 {
+  width: 200px;
+  height: 34px;
+  background-color:rgba(0, 0, 0, 0.27);
+  border-radius: 20px;
+  font-size: 13px;
+  padding-top: 12px;
+  position: relative;
+  top: 60px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+.centreacceuil_1 p {
+    z-index: 20;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+  color: rgba(0, 0, 0, 0.812);
+  font-size: 60px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+#btn_reserver {
+  width: 180px;
+  height: 45px;
+  border-radius: 20px;
+  color: rgb(0, 0, 0);
+  background-color:transparent;
+  position: relative;
+  bottom: 20px;
+ border: 2px solid var(--bleu-marine);
+  color:var(--bleu-marine);
+  padding-top: 9px;
+  text-transform: uppercase;
+  transition:all 0.3s;
+}
+#btn_reserver:focus{
+    border: none;
+    outline: none;
+}
+#btn_reserver:hover{
+   width: 200px;
+}
+

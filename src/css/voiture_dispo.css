@@ -1,0 +1,139 @@
+:root {
+  --bleu-marine: #004b8d;
+  --jaune-or: #ffb400;
+  --gris-clair: rgba(0, 0, 0, 0.088);
+  --vert: rgba(0, 185, 9, 0.57);
+}
+.voiture_dispo {
+  width: 850px;
+  min-height: 210px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0px;
+  margin-top: 50px;
+  background-image: url(../assets/fond_place.png);
+  background-size: cover;
+  background-position: -2px 0;
+  display: flex;
+}
+.place {
+  width: 170px;
+  height: 180px;
+  margin: 15px;
+  margin-left: 20px;
+  outline: 1px solid var(--bleu-marine);
+  outline-offset: 4px;
+}
+
+.range {
+  width: 100%;
+  display: flex;
+  height: 36px;
+  justify-content: space-around;
+}
+.place_d {
+  width: 20.8%;
+  height: 90%;
+  border: 1px solid rgba(0, 185, 9, 0.57);
+  color: rgba(0, 0, 0, 0.597);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+  align-items: center;
+  transition: all 0.3s;
+}
+.place_d.selected {
+  background-color:var(--vert);
+  color: white;
+}
+.place_d:hover {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.205);
+}
+#non {
+  opacity: 0;
+}
+#chauffeur {
+  color: black;
+  border: none;
+}
+
+.trajet {
+  color: var(--bleu-marine);
+  padding-top: 30px;
+  position: relative;
+  left: 0px;
+  display: flex;
+  align-items: start;
+  justify-content: end;
+  flex-direction: column;
+  padding: 20px;
+}
+.traj_1 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 11px;
+  position: relative;
+  top: 100px;
+}
+#donn {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.donn1 {
+  position: relative;
+  top: 80px;
+}
+.donn2 {
+  position: relative;
+  top: 55px;
+}
+.donn3 {
+  position: relative;
+  top: 30px;
+}
+.donn4 {
+  position: relative;
+  top: 20px;
+}
+.donn4 span{
+  color: #ff00d0;
+
+}
+#donn span {
+  font-weight: 600;
+}
+
+.validation {
+  height: 100%;
+  position: relative;
+  left: 250px;
+  width: 150px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+.validation button {
+  margin-bottom: 20px;
+  width: 120px;
+  height: 40px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.758);
+  background-color: transparent;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.327);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  gap: 10px;
+}
+.validation button p {
+  position: relative;
+  bottom: 1px;
+}
+.validation button:hover {
+  border: 1px solid white;
+  color: white;
+}
