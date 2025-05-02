@@ -178,7 +178,7 @@ function Voiture_dispo() {
         </div>
       </div>
       <div className="validation">
-        <button>
+        <button id="valider_voiture">
           <p>Valider</p> <i class="fa fa-shopping-cart"></i>
         </button>
       </div>

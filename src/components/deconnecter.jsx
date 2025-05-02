@@ -9,7 +9,7 @@ function Deconnecter({ setShowDeco }) {
         <h2>Voulez vous vous déconnecter ?</h2>
         <div className="button">
           <button>OUI</button>
-          <button onClick={() => setShowDeco(false)} id="non">
+          <button onClick={() => setShowDeco(false)} id="non2">
             NON
           </button>
         </div>

@@ -5,10 +5,7 @@ function Reservation() {
   return (
     <div>
       <NavBarPage />
-      <Crud
-        titre="reservation"
-        headers={["ID", "Nom", "Prénom", "Email", "Rôle"]}
-      />
+      <Crud titre="reservation" headers={["Date", "Nom", "Numero", "place"]} />
     </div>
   );
 }

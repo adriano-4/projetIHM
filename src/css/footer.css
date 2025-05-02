@@ -1,0 +1,94 @@
+.footer {
+  width: 100%;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: -150px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
+  overflow: hidden;
+}
+.footer_2 {
+  color: black;
+  /* background-color: red; */
+  width: 80%;
+  height: 200px;
+  position: relative;
+  top: 0px;
+}
+.footer_2.scrolled .corpfoot1:nth-child(1) {
+  animation: corpfoot_1 0.2s forwards;
+}
+
+.footer_2.scrolled .corpfoot1:nth-child(2) {
+  animation: corpfoot_1 0.5s forwards;
+}
+
+.footer_2.scrolled .corpfoot1:nth-child(3) {
+  animation: corpfoot_1 0.7s forwards;
+}
+
+.footer_2.scrolled .corpfoot1:nth-child(4) {
+  animation: corpfoot_1 1s forwards;
+}
+@keyframes corpfoot_1 {
+  from {
+    transform: translateY(200px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+.titrefoot h3 {
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.692);
+}
+.corpfoot {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  bottom: 25px;
+}
+.corpfoot1 {
+  align-items: center;
+  gap: 20px;
+  display: flex;
+}
+.corpfoot1 i {
+  font-size: 30px;
+}
+.droite {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.droite h3 {
+  position: relative;
+  top: 23px;
+}
+p {
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.464);
+}
+p:hover {
+  color: rgba(0, 0, 0, 0.697);
+}
+.fa-facebook {
+  color: blue;
+}
+.fa-whatsapp,
+.fa-phone {
+  color: rgb(0, 186, 0);
+}
+.fa-instagram {
+  background: linear-gradient(to bottom, purple, #ff0000, yellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

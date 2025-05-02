@@ -19,7 +19,7 @@ function NavBarAdmin({ setShowDeco }) {
       <div className="navbar__logo">
         <img src={translogo} alt="" />
       </div>
-      <div className="navbar__links2">
+      <div className="navbar__links5">
         <ul>
           <li>
             <Link className="link" to="/Reservation">

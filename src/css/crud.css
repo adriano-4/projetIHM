@@ -2,7 +2,8 @@
   --bleu-marine: #004b8d;
   --jaune-or: #ffb400;
   --gris-clair: rgba(0, 0, 0, 0.088);
-
+  --vert: rgb(0, 197, 53);
+  --rouge: rgb(255, 0, 0);
 }
 .crud_cont {
   position: absolute;
@@ -24,9 +25,23 @@
 }
 .crud_cont .entete .entete_1 {
   margin-left: 55px;
+}
+#liste_des{
   font-size: 16px;
   font-weight: 600;
   color: var(--bleu-marine);
+  /* animation: liste_des; */
+  animation-duration: 0.3s;
+}
+@keyframes liste_des{
+  from{
+    transform: translateY(50px);
+    scale: 0.2;
+  }
+  to{
+    scale: 1;
+    transform: translateX(0);
+  }
 }
 .crud_cont .entete .entete_2 {
   margin-right: 40px;
@@ -38,12 +53,14 @@
   width: 300px;
   height: 40px;
   border-radius: 20px;
-  background-color:var(--gris-clair);
+  background-color: var(--gris-clair);
   border: none;
   padding-left: 15px;
   transition: all 0.3s;
   color: black;
   font-size: 14px;
+  animation: liste_des;
+  animation-duration: 0.5s;
 }
 .crud_cont .entete .entete_2 input:focus {
   outline: none;
@@ -60,9 +77,28 @@
   align-items: center;
   color: white;
   overflow: hidden;
+  border: none;
+  outline: none;
+   animation: liste_des;
+  animation-duration: 0.9s;
+}
+#rech_btn {
+  background-color: var(--gris-clair);
+  color: rgba(0, 0, 0, 0.553);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+   animation: liste_des;
+  animation-duration: 0.7s;
 }
 .crud_cont .entete .entete_2 button:focus {
   outline: none;
+}
+#rech_btn:hover {
+  width: 40px;
+  background-color: rgba(0, 0, 0, 0.14);
 }
 .crud_cont .entete .entete_2 button i {
   font-size: 14px;
@@ -79,14 +115,16 @@
 .crud_cont .entete .entete_2 button:hover {
   width: 110px;
   border-radius: 20px;
+  border: none;
+  outline: none;
 }
-.crud_cont .bas {
+.crud_cont .bas2 {
   width: 100%;
   height: 89%;
   position: absolute;
   bottom: 0;
 }
-.crud_cont .bas table {
+.crud_cont .bas2 table {
   width: 93%;
   font-size: 14px;
   border-collapse: collapse;
@@ -95,51 +133,300 @@
   left: 3.5%;
   top: 20px;
 }
-.crud_cont .bas table tr {
+.crud_cont .bas2 table tr {
   height: 45px;
   color: rgba(0, 0, 0, 0.484);
 }
-.crud_cont .bas table tr th {
+.crud_cont .bas2 table tr th {
   border-bottom: 1px solid var(--bleu-marine);
   font-size: 13px;
 }
-.crud_cont .bas table tr td {
+.crud_cont .bas2 table tr td {
   color: black;
   border-bottom: 1px solid rgba(18, 0, 89, 0.337);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   transition: all 0.3s;
 }
-.crud_cont .bas table tr td button {
+.crud_cont .bas2 table tr td button {
   border-radius: 20px;
   width: 35px;
   height: 35px;
   font-size: 12px;
   border: none;
 }
-.crud_cont .bas table tr td button:hover {
+.crud_cont .bas2 table tr td button:hover {
   border: none;
   outline: none;
 }
-.crud_cont .bas table tr td button:focus {
+.crud_cont .bas2 table tr td button:focus {
   outline: none;
   border: none;
 }
-.crud_cont .bas table tr td .modifier {
+.crud_cont .bas2 table tr td .modifier {
   background-color: transparent;
-  color: rgb(0, 197, 53);
+  color: var(--vert);
   position: relative;
   font-size: 18px;
   top: -4px;
+  left: 30px;
 }
-.crud_cont .bas table tr td .supprimer {
+.crud_cont .bas2 table tr td .supprimer {
   background-color: transparent;
-  color: rgb(255, 0, 0);
+  color: var(--rouge);
   position: relative;
   font-size: 18px;
-  right: 8px;
+  right: 18px;
   top: -5px;
 }
-#butt{
-    width: 100px;
+#butt {
+  width: 100px;
+}
+
+#butt .valider_modifier {
+  border: none;
+  cursor: pointer;
+  width: 43px;
+  height: 30px;
+  background: rgba(0, 197, 53, 0.19);
+  color: var(--vert);
+}
+
+#butt .annuler_modifier {
+  background: var(--gris-clair);
+  border: none;
+  cursor: pointer;
+  width: 43px;
+  height: 30px;
+  color: rgba(0, 0, 0, 0.43);
+  margin-left: 10px;
+}
+
+#input_modifier {
+  width: 80%;
+  height: 20px;
+  padding: 5px;
+  border: none;
+  background-color: var(--gris-clair);
+  color: black;
+  font-size: 12px;
+  padding-left: 10px;
+  border-radius: 4px;
+  animation: input_modifier 0.3s;
+}
+@keyframes input_modifier {
+  from {
+    width: 50%;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+/* code de ajout */
+.floucrud {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(1px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.273);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  color: black;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+}
+.floucrud1 {
+  width: 500px;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+  animation: cont1 0.2s;
+  padding: 20px;
+  padding-top: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.floucrud1_2 {
+  width: 400px;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+  animation: cont1 0.2s;
+  padding: 20px;
+  padding-top: 0;
+}
+.floucrud1 h2 {
+  font-size: 17px;
+  margin-bottom: 50px;
+  /* color: rgba(0, 0, 0, 0.597); */
+  color: var(--bleu-marine);
+}
+.floucrud1_2 h2 {
+  margin-top: 40px;
+  margin-bottom: 0px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.675);
+}
+.floucrud1_2 p {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.523);
+}
+.btn_ajouter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.btn_supprimer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.btn_supprimer button {
+  width: 80px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  background-color: transparent;
+  color: var(--rouge);
+  background-color: rgba(255, 0, 0, 0.118);
+  border: none;
+  outline: none;
+}
+.btn_supprimer #non_sup {
+  background-color: transparent;
+  /* border: 1px solid rgba(0, 0, 0, 0.233); */
+  color: rgba(0, 0, 0, 0.567);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.btn_ajouter button {
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+.btn_ajouter button:hover {
+  border: none;
+  outline: none;
+}
+#annuler_ajout {
+  /* border: 1px solid rgba(0, 0, 0, 0.233); */
+  color: rgba(0, 0, 0, 0.567);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+#ajouter_ajout {
+  /* border: 1px solid rgba(0, 0, 0, 0.233); */
+  /* color: var(--vert);
+  background-color: rgba(0, 255, 0, 0.137); */
+  color: var(--bleu-marine);
+  background-color: #004b8d1d;
+}
+.form-group {
+}
+.form-group label {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.644);
+}
+#input {
+  width: 298px;
+  height: 35px;
+  background-color: transparent;
+  padding-left: 10px;
+  color: black;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #004b8d5a;
+  transform: translateY(-10px);
+  font-size: 12px;
+  transition: all 0.3s;
+}
+#input:focus {
+  border-bottom: 1px solid var(--bleu-marine);
+}
+
+#resultat{
+  width: 315px;
+  height: auto;
+  background-color: white;
+  position: absolute;
+  right: 100px;
+  top: 65px;
+  z-index: 200;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.296);
+  max-height: 200px;
+  overflow: auto;
+}
+#p_res{
+  height: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.312);
+  padding-bottom: 20px;
+   padding-top: 10px;
+  margin-bottom: 0;
+  margin-top: 0;
+  /* color: rgba(0, 0, 0, 0.644); */
+  cursor:default;
+  color: var(--bleu-marine);
+}
+
+.highlight-row {
+  background-color: #ffeb3b;
+  transition: background-color 0.5s ease;
+}
+#p_res .fa-list{
+  margin-right: 10px;
+  transform: translateY(1px);
+}
+#resultat::-webkit-scrollbar{
+    background-color: rgb(225, 225, 225);
+    width: 11px;
+}
+#resultat::-webkit-scrollbar-thumb{
+    background-color:rgba(0, 0, 0, 0.229);
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.426);
+}
+#resultat table {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-collapse: collapse;
+}
+#resultat table tr{
+  height: 40px;
+}
+#resultat table tr td{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.074);
+}
+#red_td{
+  text-align: left;
+  padding-left: 20px;
+  width: 90%;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.564);
+}
+#btn_info{
+  background-color: transparent;
+  /* color: rgba(0, 0, 0, 0.564); */
+  color: var(--bleu-marine);
+  padding-left: 23px;
+  cursor: pointer;
+  /* display: none; */
+  animation: none;
+}
+#btn_info:hover{
+  width: 40px;
+  color: black;
 }
